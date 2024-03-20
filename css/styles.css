@@ -1,0 +1,666 @@
+:root {
+    --carousel-height: 60rem;
+    --carousel-width: 100%;
+    --blanco: hsl(0, 0%, 100%);
+    --negro: #000000;
+    --rojo: #FF0000;
+    --rojo1: #772929a6;
+
+    --fuentePrincipal:'Raleway', sans-serif;
+    --fuenteSecundaria: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1.8;
+    background-color: var(--negro);
+}
+h1, h2, h3 {
+    font-weight: 900;
+    margin: 1rem 0 3rem 0;
+    line-height: 1.2;
+}
+h1 {
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 3.8rem;
+}
+h3 {
+    font-size: 2.8rem;
+}
+a {
+    text-decoration: none;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+p {
+    margin: 0;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* Header */
+
+.contenido-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+    .barra {
+        flex-direction: row;
+    } 
+}
+
+.logo img {
+    width: 20rem;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .contacto {
+        align-items: flex-end;
+    }
+}
+
+.info-contacto {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .info-contacto {
+        flex-direction: row;
+    }
+}
+
+.ubicacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    padding-top: 0;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .ubicacion {
+        font-size: 2rem;
+        padding: 1rem 2rem 1rem 2rem;
+        flex-direction: row;
+    }
+}
+
+.ubicacion p {
+    color: var(--blanco);
+    font-family: var(--fuenteSecundaria);
+}
+
+.celular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .celular {
+        font-size: 2rem;
+        padding: 1rem 2rem 1rem 2rem;
+        margin-top: unset;
+        flex-direction: row;
+    }
+}
+
+.celular a {
+    color: var(--blanco);
+    font-family: var(--fuenteSecundaria);
+}
+
+.email
+{
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .email {
+        font-size: 2rem;
+        padding: 1rem 2rem 1rem 2rem;
+        margin-top: unset;
+        flex-direction: row;
+    }
+}
+
+.email p {
+    color: var(--blanco);
+    font-family: var(--fuenteSecundaria);
+}
+
+.menu {
+    
+    width: 100%;
+    
+}
+
+.menu-hamburguesa {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .menu-hamburguesa {
+        display: none;
+        margin-top: unset;
+    }
+}
+
+.navegacion {
+    display: flex;
+    background-color: var(--rojo);
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+    flex-direction: row;
+    }
+}
+
+.cerrar
+{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .cerrar {
+        display: flex;
+    }
+}
+
+.navegacion a{
+    color: var(--blanco);
+    padding: 1rem 2rem 1rem 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    transition: background-color;
+    transition-duration: 500ms;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .navegacion a {
+        margin: 0;
+    }
+}
+
+.navegacion a:hover {
+    background-color: var(--rojo1);
+}
+
+
+
+.slogan {
+    padding: 4rem;
+    text-align: left;
+    min-height: 80rem;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 98%, rgba(49, 49, 49, 0.733) 100%), url(../img/header.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: var(--blanco);
+}
+@media (min-width: 768px) {
+    .slogan {
+        background-size: contain;
+    }
+}
+
+.slogan h1 {
+    text-transform: uppercase;
+    font-size: 3.7rem;
+}
+
+@media (min-width: 480px) {
+    .slogan h1 {
+        font-size: 4rem;
+    }
+}
+
+.slogan p {
+    font-size: 2.5rem;
+}
+
+.slogan a {
+    margin-top: 2rem;
+    display: block;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2rem;
+    max-width: 80%;
+    border-radius: 2rem;
+    transition: background-color;
+    transition-duration: 500ms;
+    padding: 1rem;
+}
+
+.slogan a:hover {
+    background-color: var(--rojo1);
+}
+
+@media (min-width: 768px) {
+    .slogan a {
+        max-width: 30%;
+    }
+}
+
+@media (min-width: 992px) {
+    .slogan a {
+        max-width: 20%;
+    }
+}
+
+/* WHATSAPP FLOTANTE */
+
+.whatsapp-flotante {
+    display: flex;
+    position: fixed;
+    bottom: 4rem;
+    left: 2%;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-flotante p {
+    color: var(--blanco);
+    font-weight: 900;
+    font-size: 2rem;
+    background-color: var(--rojo1);
+    padding: 1rem;
+    margin-left: 1rem;
+    border-radius: 1rem;
+    visibility: hidden;
+    transition: visibility;
+    transition-duration: 500ms;
+}
+
+a.whatsapp:hover ~ p {
+    visibility: visible;
+    background-color: var(--rojo);
+}
+
+.whatsapp img {
+    width: 5rem;
+    height: 5rem;
+}
+
+/*SObre nosotros*/
+.nosotros
+{
+    color: var(--blanco);
+    padding: 3rem;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 98%, rgba(49, 49, 49, 0.733) 100%), url(../img/nosotros.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center; 
+}
+
+.nosotros h2
+{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.nosotros p 
+{
+    font-size: 3rem;
+    line-height: 1.4;
+}
+
+
+/* EXPERIENCIA */
+
+.info-servicios {
+    display: grid;
+    grid-template-columns: unset;
+    grid-template-rows: repeat(2, 1fr);
+    background: linear-gradient(to bottom, var(--gris) 50%, var(--negro) 50%, var(--negro) 100%);
+}
+
+@media (min-width: 992px) {
+    .info-servicios {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: unset;
+        background: linear-gradient(to right, var(--gris) 50%, var(--negro) 50%, var(--negro) 100%);
+    }
+}
+
+.experiencia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    color: var(--blanco);
+}
+
+@media (min-width: 992px) {
+    .experiencia {
+        padding: 3rem;
+    }
+}
+
+.experiencia p {
+    font-size: 2rem;
+}
+
+@media (min-width: 992px) {
+    .experiencia p {
+        font-size: 3rem;
+    }
+}
+
+.experiencia span {
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--mostaza);
+}
+
+@media (min-width: 992px) {
+    .experiencia span {
+        font-size: 4rem;
+    }
+}
+
+.servicios {
+    color: var(--blanco);
+    padding: 3rem;
+}
+
+.servicios h2 {
+    text-align: center;
+}
+
+.servicios p {
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* SERVICIOS */
+
+.taller {
+    gap: 2rem;
+   display: flex;
+
+}
+
+@media (min-width: 768px) {
+   
+}
+
+.diagnostico p
+{
+    color: var(--blanco);
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.7rem;
+}
+
+/* TIPOS DE VEHICULOS */
+
+.tipos-vehiculos {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: var(--gris);
+    color: var(--blanco);
+}
+
+.tipos-vehiculos h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.tipos-vehiculos p {
+    text-align: center;
+    padding: 2rem;
+}
+
+.marcas {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--rojo);
+
+}
+
+@media (min-width: 768px) {
+    .marcas {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+}
+
+.marca {
+    margin: 0 auto;
+}
+
+.marca img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+}
+
+/*Carrusel*/
+  /* Oculta el scroll horizontal */
+  .carousel {
+    height: var(--carousel-height);
+    overflow: hidden;
+    margin: 0 auto;
+    width: var(--carousel-width);
+    
+  }
+  
+  .carousel h4
+  {
+    color: var(--blanco);
+    font-size: 4rem;
+    text-align: center;
+  }
+  .carousel blockquote
+  {
+    font-size: 3rem;
+    color: var(--blanco);
+    padding: 2rem;
+  }
+
+  .carousel__container {
+    scroll-snap-type: x mandatory;
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  .carousel__slider {
+    height: var(--carousel-height);
+    min-width: var(--carousel-width);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start;
+  }
+  
+  .carousel__slider--1 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 98%, rgba(49, 49, 49, 0.733) 100%), url(../img/mecanica.jpg);
+  }
+  
+  .carousel__slider--2 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 98%, rgba(49, 49, 49, 0.733) 100%), url(../img/mecanica1.jpg);
+  }
+  
+  .carousel__slider--3 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 98%, rgba(49, 49, 49, 0.733) 100%), url(../img/mecanica2.jpeg);
+  }
+  
+  /* Estilos para la demo, pueden ser borrados */
+  .carousel__slider h1,
+  .carousel__slider p {
+    color: white;
+    text-shadow: 1px 1px 5px black;
+  }
+
+/* MAPA */
+
+.mapa 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 2rem auto;
+}
+
+.mapa iframe {
+    width: 50%;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: var(--negro);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.footer-contacto {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+@media (min-width: 992px) {
+    .footer-contacto {
+        justify-content:space-around;
+        flex-direction: row;
+    }
+}
+
+.footer-horario {
+    color: var(--blanco);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (min-width: 992px) {
+    .footer-horario {
+        flex-direction: row;
+    }
+}
+
+.info-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .info-footer {
+        flex-direction: row;
+    }
+}
+
+.footer-ubicacion {
+    display: flex;
+    align-items: center;
+    color: var(--blanco);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    flex-direction: column;
+}
+
+@media (min-width: 992px) {
+    .footer-ubicacion {
+        margin-right: 1rem;
+        margin-bottom: 0;
+        flex-direction: row;
+    }
+}
+
+.footer-celular {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-direction: column;
+}
+
+@media (min-width: 992px) {
+    .footer-celular {
+        margin-bottom: 0;
+        flex-direction: row;
+    }
+}
+
+.footer-celular a {
+    color: var(--blanco);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.copyright {
+    border-top: 1px solid var(--blanco);
+    text-align: center;
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+}
